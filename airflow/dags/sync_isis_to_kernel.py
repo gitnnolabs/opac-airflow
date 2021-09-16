@@ -265,6 +265,8 @@ def register_or_update(_id: str, payload: dict, entity_url: str):
                 method="PATCH",
                 data=payload
             )
+            logging.info("Eu sou uma atualização do periódico: %s, com payload: %s" % (entity_url, str(payload)))
+            logging.info("Response code: %s" % response.status_code)
     return response
 
 
